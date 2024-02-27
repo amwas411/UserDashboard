@@ -1,0 +1,8 @@
+bin/
+obj/
+Properties/
+.vs/
+.vscode/
+node_modules/
+.angular/
+dist/

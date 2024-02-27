@@ -1,0 +1,72 @@
+:root {
+	--thead-color: darkkhaki;
+	--tbody-main-color: bisque;
+	--tbody-secondary-color: beige;
+}
+
+body {
+	background-color: antiquewhite;
+}
+
+.field {
+    display: flex;
+	justify-content: space-between;
+	margin-bottom: 2px;
+}
+
+.field input {
+    border-width: 1px;
+}
+
+app-root {
+	display: block;
+	position: relative;
+	width: max-content;
+}
+
+h1, h2, .block {
+	margin: 3vh 0;
+}
+
+.hidden {
+	display: none;
+}
+
+.cdk-global-overlay-wrapper {
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+	transform: translateX(-50%) translateY(-50%);
+	border: solid 1px;
+	padding: 10px;
+	background-color: beige;
+}
+
+app-user-dialog form {
+	background-color: beige;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+thead {
+	background-color: var(--thead-color);
+}
+
+th,
+td {
+	padding: 8px 10px;
+	text-align: center;
+	border: 1px solid;
+	max-width: 150px;
+}
+
+tbody tr:nth-child(odd) {
+	background-color: var(--tbody-main-color);
+}
+
+tbody tr:nth-child(even) {
+	background-color: var(--tbody-secondary-color);
+}

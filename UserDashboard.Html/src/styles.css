@@ -1,0 +1,55 @@
+.hidden {
+	display: none;
+}
+
+.field {
+    display: flex;
+	justify-content: space-between;
+	margin-bottom: 2px;
+}
+
+.field input {
+    border-width: 1px;
+}
+
+#content {
+	position: relative;
+	width: max-content;
+}
+
+#search-panel {
+	width: max-content;
+}
+
+#search-panel, h1, h2 {
+	margin: 3vh 0;
+}
+
+#search-output {
+	display: block;
+	width: max-content;
+	height: 63vh;
+	overflow: auto;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+th, td {
+  padding: 8px 10px;
+  text-align: center;
+  border: 1px solid;
+  max-width: 150px;
+}
+
+#user-dialog {
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    background-color: beige;
+    padding: 10px;
+	border: solid 1px;
+	transform: translateX(-50%) translateY(-50%);
+}

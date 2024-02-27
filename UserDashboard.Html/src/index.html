@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Управление пользователями</title>
+	<script src="main.js"></script>
+	<link rel="stylesheet" href="styles.css" />
+	<meta charset="UTF-8">
+</head>
+
+<body>
+	<div id="content">
+		<h1>Управление пользователями</h1>
+		<div id="search-panel">
+			<button id="add-button">Добавить пользователя</button>
+			<h2>Найти пользователя</h2>
+			<form id="search-form">
+				<div class="field">
+					<label for="search-input-name">Пользователь</label>
+					<input type="search" id="search-input" name="name" />
+				</div>
+
+				<div class="field">
+					<label for="search-input-rows">Количество результатов</label>
+					<input type="number" id="search-input-rows" name="rows" />
+				</div>
+
+				<div class="button-block">
+					<button id="search-button">Поиск</button>
+				</div>
+			</form>
+		</div>
+
+		<div id="search-output"></div>
+
+		<div id="user-dialog">
+			<form id="user-form">
+				<div class="field">
+					<label for="input-name">Пользователь</label>
+					<input id="input-name" name="name" />
+				</div>
+
+				<div class="field">
+					<label for="input-active">Активен</label>
+					<input type="checkbox" id="input-active" name="active" />
+				</div>
+
+				<div class="field">
+					<label for="input-contactName">Контакт</label>
+					<input id="input-contactName" name="contact.name" />
+				</div>
+
+				<div class="field">
+					<label for="input-userPassword">Пароль</label>
+					<input id="input-userPassword" name="userPassword" />
+				</div>
+
+				<div class="button-block">
+					<button id="dialog-close-btn">Закрыть</button>
+					<button id="dialog-ok-btn">OK</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</body>
+
+</html>

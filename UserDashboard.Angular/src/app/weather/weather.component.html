@@ -1,0 +1,45 @@
+<div *ngFor="let data of weatherData | async">
+	<table class="block">
+		<thead><tr><th>Город</th></tr></thead>
+		<tbody><tr><td>{{data.name}}</td></tr></tbody>
+	</table>
+
+	<table class="block">
+		<thead><tr>
+			<th>Температура, С</th>
+			<th>Ощущается, С</th>
+			<th>Мин. тепература, С</th>
+			<th>Макс. температура, С</th>
+			<th>Давление, мм рт.ст.</th>
+			<th>Влажность, %</th>
+		</tr></thead>
+
+		<tbody><tr>
+			<td>{{data.main.temp}}</td>
+			<td>{{data.main.feels_like}}</td>
+			<td>{{data.main.temp_min}}</td>
+			<td>{{data.main.temp_max}}</td>
+			<td>{{data.main.pressure}}</td>
+			<td>{{data.main.humidity}}</td>
+		</tr></tbody>
+	</table>
+
+	<table class="block">
+		<thead><tr><th>Погода</th></tr></thead>
+		<tbody><tr *ngFor="let item of data.weather">
+			<td>{{item.description}}</td>
+		</tr></tbody>
+	</table>
+
+	<table class="block">
+		<thead><tr>
+			<th>Ветер, м/с</th>
+			<th>Облачность, %</th>
+		</tr></thead>
+
+		<tbody><tr>
+			<td>{{data.wind.speed}}</td>
+			<td>{{data.clouds.all}}</td>
+		</tr></tbody>
+	</table>
+</div>

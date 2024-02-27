@@ -1,0 +1,26 @@
+<form id="user-form" [formGroup]="userForm">
+	<div class="field">
+		<label for="input-name">Пользователь</label>
+		<input id="input-name" formControlName="name" required />
+	</div>
+
+	<div class="field">
+		<label for="input-name">Активен</label>
+		<input type="checkbox" id="input-active" formControlName="active" />
+	</div>
+
+	<div class="field">
+		<label for="input-contactName">Контакт</label>
+		<input id="input-contactName" formControlName="contactName" />
+	</div>
+
+	<div class="field">
+		<label for="input-userPassword">Пароль</label>
+		<input id="input-userPassword" formControlName="userPassword" required />
+	</div>
+
+	<div class="button-block">
+		<button id="dialog-close-btn" (click)="dialogCloseButtonClick($event)">Закрыть</button>
+		<button id="dialog-ok-btn" (click)="dialogOkButtonClick($event)">OK</button>
+	</div>
+</form>

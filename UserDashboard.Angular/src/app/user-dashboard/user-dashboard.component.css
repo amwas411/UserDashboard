@@ -1,0 +1,13 @@
+app-search-panel {
+	display: block;
+}
+
+app-search-output {
+	display: block;
+	height: 56vh;
+	overflow: auto;
+}
+
+#search-form {
+	width: max-content;
+}

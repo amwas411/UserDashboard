@@ -1,0 +1,20 @@
+<table id="output-table">
+	<thead>
+		<tr>
+			<th>Id</th>
+			<th>Пользователь</th>
+			<th>Контакт</th>
+			<th>Активен</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr *ngFor="let user of users">
+			<td>{{user?.id}}</td>
+			<td>{{user?.name}}</td>
+			<td>{{user?.contact?.name}}</td>
+			<td>{{user?.active}}</td>
+			<td><button (click)="updateButtonClick(user)" [disabled]="isUpdateButtonDisabled">ОБНОВИТЬ</button></td>
+			<td><button (click)="deleteButtonClick(user)">УДАЛИТЬ</button></td>
+		</tr>
+	</tbody>
+</table>
