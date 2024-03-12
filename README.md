@@ -1,3 +1,5 @@
+Web application designed for user management in BPMSoft/Creatio CRM.
+
 Requirements.
 
 1. .NET 8.0 or greater. Optionally, you need to install [.NET Core Hosting Bundle](https://dotnet.microsoft.com/permalink/dotnetcore-current-windows-runtime-bundle-installer) to be able to host the app in IIS.
