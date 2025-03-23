@@ -6,3 +6,6 @@ Properties/
 node_modules/
 .angular/
 dist/
+*.sln
+UserDashboard.WebApp/appsettings - Copy.json
+wwwroot/

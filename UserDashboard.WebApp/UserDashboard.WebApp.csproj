@@ -4,11 +4,32 @@
 		<TargetFramework>net8.0</TargetFramework>
 		<Nullable>enable</Nullable>
 		<ImplicitUsings>enable</ImplicitUsings>
+    <AngularPath>../UserDashboard.Angular/</AngularPath>
+    <AngularDistPath>../UserDashboard.Angular/dist/user-dashboard/browser/</AngularDistPath>
+    <WwwRootPath>wwwroot/</WwwRootPath>
   </PropertyGroup>
 
 	<ItemGroup>
 		<PackageReference Include="Microsoft.Windows.Compatibility" Version="8.0.1" />
 		<ProjectReference Include="..\UserDashboard.Repository\UserDashboard.Repository.csproj" />
 	</ItemGroup>
+
+  <Target Name="NpmInstall" >
+    <Exec Command="npm install $(AngularPath)"></Exec>
+  </Target>
+
+  <Target Name="NgBuild" DependsOnTargets="NpmInstall">
+    <Exec Command="npm run --prefix $(AngularPath) build"></Exec>
+    <ItemGroup>
+      <DistFiles Include="$(AngularDistPath)*"></DistFiles>
+    </ItemGroup>
+  </Target>
+
+  <Target Name="CopyDist" DependsOnTargets="NgBuild" BeforeTargets="BeforeBuild">
+    <ItemGroup>
+      <WwwRootFiles Include="$(WwwRootPath)*"></WwwRootFiles>
+    </ItemGroup>
+    <Copy SourceFiles="@(DistFiles)" DestinationFolder="$(WwwRootPath)"></Copy>
+  </Target>
 
 </Project>

@@ -1,2 +1,0 @@
-cd UserDashboard.Angular & npm install & node_modules\.bin\ng build & cd .. & del /Q UserDashboard.WebApp\wwwroot & copy /Y UserDashboard.Angular\dist\user-dashboard\browser UserDashboard.WebApp\wwwroot & dotnet publish UserDashboard.WebApp
-: cd UserDashboard.Html & npm install & node_modules\.bin\tsc -p tsconfig.json & cd .. & del /Q UserDashboard.WebApp\wwwroot & copy /Y UserDashboard.Html\src UserDashboard.WebApp\wwwroot & dotnet publish UserDashboard.WebApp
